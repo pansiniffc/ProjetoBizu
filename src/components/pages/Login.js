@@ -1,19 +1,17 @@
 import Form from '../Form';
 import Illustration from '../Illustration';
 import TextInput from '../Textinput';
-import Checkbox from '../Checkbox';
 import Button from '../Button';
 import classes from '../../styles/Signup.module.css';
 
 export default function Signup() {
   return (
     <>
-      <h1>Create an account</h1>
+      <h1>Login to your account</h1>
+
       <div class="column">
         <Illustration />
-        <Form method="post" className={`${classes.signup}`}>
-          <TextInput type="text" placeholder="Enter name" icon="person" />
-
+        <Form className={`${classes.login}`}>
           <TextInput
             type="text"
             placeholder="Enter email"
@@ -22,20 +20,12 @@ export default function Signup() {
 
           <TextInput type="password" placeholder="Enter password" icon="lock" />
 
-          <TextInput
-            type="password"
-            placeholder="Confirm password"
-            icon="lock_clock"
-          />
-
-          <Checkbox text="I agree to the Terms & Conditions" />
-
           <Button>
             <span>Submit Now</span>
           </Button>
 
           <div className="info">
-            Already have an account? <a href="login.html">Login</a> instead.
+            Don't have an account? <a href="Signup.html">Signup</a> instead.
           </div>
         </Form>
       </div>
